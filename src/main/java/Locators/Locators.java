@@ -19,18 +19,16 @@ public class Locators {
         String username = "standard_user";
         String password = "secret_sauce";
 
+
         //Locators by ID
         WebElement inputUserName = driver.findElement(By.id("user-name"));
         WebElement inputPassword = driver.findElement(By.id("password"));
-        WebElement loginBtn = driver.findElement(By.id("login-button"));
+        WebElement loginBtn = driver.findElement(By.className("submit-button"));
 
         //Login
         inputUserName.sendKeys(username);
         inputPassword.sendKeys(password);
         loginBtn.click();
-
-        //Into the page
-        WebElement title = driver.findElement(By.className("title"));
 
 
 
