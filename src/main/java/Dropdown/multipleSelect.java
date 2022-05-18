@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
-public class Dropdown {
+public class multipleSelect {
 
     public static void main (String [] args){
         System.setProperty("webdriver.chrome.driver","src\\main\\resources\\Driver\\chromedriver.exe");
@@ -15,12 +15,13 @@ public class Dropdown {
         driver.get(url);
 
         //Declare the object of UI menu
+        Select  multipleSelect =  new Select(driver.findElement(By.id("cars")));
 
-        Select oldStyleMenu =  new Select(driver.findElement(By.id("oldSelectMenu")));
+        multipleSelect.selectByValue("audi"); //By value =  Audi
+        multipleSelect.selectByVisibleText("Volvo");//By text = Volvo
+        multipleSelect.selectByIndex(2);//By index = Opel
 
-        oldStyleMenu.selectByIndex(1); //By index = Blue -- The list it's a array
-        oldStyleMenu.selectByValue("6"); //By value =  White
-        oldStyleMenu.selectByVisibleText("Aqua"); //By visible text = Aqua
+
 
     }
 }
