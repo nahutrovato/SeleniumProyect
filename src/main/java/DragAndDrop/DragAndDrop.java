@@ -13,7 +13,17 @@ public class DragAndDrop {
         WebDriver driver = new ChromeDriver();
 
         String url = "https://demoqa.com/droppable";
+        driver.get(url);
 
+        //Instantiate the actions class
+        Actions action = new Actions(driver);
+
+        //Define the from and to
+        WebElement from = driver.findElement(By.cssSelector("#draggable"));
+        WebElement to = driver.findElement(By.id("droppable"));
+
+        //Drag and drop
+        action.dragAndDrop(from, to).build().perform();
 
 
 
