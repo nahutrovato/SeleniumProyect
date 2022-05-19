@@ -9,7 +9,6 @@ public class FirstTest {
 
         //Instanciar chrome driver
         WebDriver driver = new ChromeDriver();
-
         //Entrar a Google
         driver.get("https://www.google.com/");
 
