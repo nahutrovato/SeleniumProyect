@@ -15,7 +15,7 @@ public class multipleSelect {
         driver.get(url);
 
         //Declare the object of UI menu
-        Select  multipleSelect =  new Select(driver.findElement(By.id("cars")));
+        Select multipleSelect =  new Select(driver.findElement(By.id("cars")));
 
         multipleSelect.selectByValue("audi"); //By value =  Audi
         multipleSelect.selectByVisibleText("Volvo");//By text = Volvo

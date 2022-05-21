@@ -5,7 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class enterPage {
+public class EnterPage {
 
     @Given("User into url https://www.google.com/")
     public void enterPage() {
